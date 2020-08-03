@@ -35,10 +35,16 @@ print("Distance is: {:.2f}".format(dist(a, b)))
 # Write a function `print_tuple` that prints all the values in a tuple
 
 # YOUR CODE HERE
+print('task1')
+def print_tuple(n):
+    for i in n:
+    	print(i) 
 
 t = (1, 2, 5, 7, 99)
 print_tuple(t)  # Prints 1 2 5 7 99, one per line
 
+print('task3')
 # Declare a tuple of 1 element then print it
-u = (1)  # What needs to be added to make this work?
+u = (1,)  # What needs to be added to make this work?
+#IT NEEDED A COMMA AT THE END
 print_tuple(u)
