@@ -11,22 +11,27 @@ for more info regarding list comprehensions.
 # Write a list comprehension to produce the array [1, 2, 3, 4, 5]
 
 y = []
+for x in range(1, 6):
+    y.append(x)
 
-print (y)
+print (f'task1 {y}')
 
 # Write a list comprehension to produce the cubes of the numbers 0-9:
 # [0, 1, 8, 27, 64, 125, 216, 343, 512, 729]
 
 cubes = []
+for c in range(10):
+    cubes.append(c**3)
 
-print(cubes)
+print(f'task2 {cubes}')
 
 # Write a list comprehension that utilizes slicing syntax to product 
 # a list with the elements from the first half of the `cubes` list
 
 first_half_of_cubes = []
+first_half_of_cubes.append(cubes[:5])
 
-print(first_half_of_cubes)
+print(f'task3 {first_half_of_cubes}')
 
 # Write a list comprehension to produce the uppercase version of all the
 # elements in array a. Hint: "foo".upper() is "FOO".
@@ -34,7 +39,8 @@ print(first_half_of_cubes)
 lowercase = ["foo", "bar", "baz"]
 
 uppercase = []
-
+for u in lowercase:
+    uppercase.append(u.upper())
 print(uppercase)
 
 # Use a list comprehension to create a list containing only the _even_ elements
@@ -42,7 +48,12 @@ print(uppercase)
 
 x = input("Enter comma-separated numbers: ").split(',')
 
+
+num_list = [e for e in x if e % 2 == 0]
+
+print(x)
+print('{}'.format(num_list))
 # What do you need between the square brackets to make it work?
-y = []
+y = [num_list]
 
 print(y)
