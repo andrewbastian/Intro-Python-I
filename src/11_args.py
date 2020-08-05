@@ -12,7 +12,7 @@ def f1(a, b):
     return a + b
 print(f1(1, 2))
 
-# Write a function f2 that takes any number of integer arguments 
+# Write a function f2 that takes any number of integer arguments
 # and returns the sum.
 # Note: Google for "python arbitrary arguments" and look for "*args"
 
@@ -38,6 +38,8 @@ print(f2(7, 9, 1, 3, 4, 9, 0))  # Should print 33
 a = [7, 6, 5, 4]
 
 # How do you have to modify the f2 call below to make this work?
+
+
 print(f'___aug f2___{f2(sum(a))}')    # Should print 22
 
 # Write a function f3 that accepts either one or two arguments. If one argument,

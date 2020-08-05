@@ -31,7 +31,7 @@ import sys
 import calendar
 from datetime import datetime
 
-mm = int(input('enter month: '))
+"""mm = int(input('enter month: '))
 yy = int(input('enter year: '))
 
 x = datetime.now()
@@ -39,6 +39,46 @@ this_year = x.strftime("%y")
 print(this_year)
 
 def calendar_input(MM, YY='this_year'):
+    if sys.argv > 0
     print(calendar.fromatmonth(YY, MM))
 
-calendar_input(mm, yy)
+calendar_input(mm, yy)"""
+
+# checks args passed into file
+
+arg_l = len(sys.argv)
+
+# if len(sys.arg) == 3
+# then 2 args are passed in
+
+
+if arg_l == 1:
+    # if len(sys.argv) == 1 <- 1 b/c name of program is always in
+    # then no args passed in
+
+    month = datetime.now().month
+    year = datetime.now().year
+
+elif arg_l == 2:
+    # if len(sys.argv) == 2
+    # then 1 arg passed in
+    month = int(sys.argv[1])
+    year = datetime.now().year
+
+elif arg_l == 3:
+
+    # if len(sys.arg) == 3
+    # then 2 args are passed in
+    month = int(sys.argv[1])
+    year = int(sys.argv[2])
+
+    # print cal
+
+
+else:
+    print('usage: cal.py [month] [year]')
+    # exit program - 0 = nothing went wrong, 1 = error
+    sys.exit(1)
+
+cal = calendar.TextCalendar()
+cal.pmonth(year, month)
